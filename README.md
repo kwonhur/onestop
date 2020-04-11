@@ -1,11 +1,7 @@
-inspinia-reactjs
-=====================
+One Stop Project Management
 
-### Usage
 
-```
-npm install
-npm start
-open http://localhost:8000
-```
+
+
+
 
