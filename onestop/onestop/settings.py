@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'api',
     'login',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -124,3 +125,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = "/home/kwon/Downloads/inspiniaadmin-292/Bootstrap 3.3/ReactJS_Seed_Project/onestop/"
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
