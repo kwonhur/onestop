@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'api',
     'login',
     'crispy_forms',
+    'rest_framework',
+    'home',
 ]
 
 MIDDLEWARE = [
@@ -126,7 +128,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = "/home/kwon/Downloads/inspiniaadmin-292/Bootstrap 3.3/ReactJS_Seed_Project/onestop/"
+STATIC_ROOT = "/home/kwon/Downloads/inspiniaadmin-292/Bootstrap 3.3/ReactJS_Seed_Project/onestop/static-collection/"
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
