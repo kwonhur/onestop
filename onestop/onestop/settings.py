@@ -126,12 +126,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'http://127.0.0.1:8080/'
 
 STATIC_ROOT = "/home/kwon/Downloads/inspiniaadmin-292/Bootstrap 3.3/ReactJS_Seed_Project/onestop/static-collection/"
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "static")
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
