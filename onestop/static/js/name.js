@@ -1,6 +1,5 @@
-const name = document.getElementById('name');
-name.innerText = 'this is a very simple case';
+import { hot } from 'react-hot-loader';
 
-if (module.hot){
-    module.hot.accept();
-}
+const Name = () => 'd'
+
+export default hot(module)(Name);
