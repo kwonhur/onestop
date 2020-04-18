@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Name from './name';
-import './name';
-import './counter';
-import '../css/hello.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import Profile from "./profile";
+import Dashboards from "./dashboards";
+import "./counter";
 
-ReactDOM.render(<Name />, document.getElementById('name'));
+ReactDOM.render(<Profile />, document.getElementById("profile"));
+ReactDOM.render(<Dashboards />, document.getElementById("dashboards"));
