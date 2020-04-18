@@ -37,14 +37,14 @@
             <form class="m-t" role="form" method="post">
             {% csrf_token %}
                 <div id="div_id_username" class="form-group"> <div class="controls ">
-                <input type="text" placeholder="Name" name="username" maxlength="150" autocapitalize="none" autocomplete="username" autofocus class="textinput textInput form-control" required id="id_username"> <div id="hint_id_username" class="help-block"></div></div></div>
+                <input type="text" placeholder="Username" name="username" maxlength="150" autocapitalize="none" autocomplete="username" autofocus class="textinput textInput form-control" required id="id_username"> <div id="hint_id_username" class="help-block"></div></div></div>
                 <div id="div_id_password1" class="form-group"> <div class="controls ">
                 <input type="password" placeholder="Password" name="password1" autocomplete="new-password" class="textinput textInput form-control" required id="id_password1"> <div id="hint_id_password1" class="help-block"></div></div></div>
                 <div id="div_id_password2" class="form-group"> <div class="controls ">
                 <input type="password" placeholder="Re-enter Password" name="password2" autocomplete="new-password" class="textinput textInput form-control" required id="id_password2"> <div id="hint_id_password2" class="help-block"></div> </div></div>
                 <button type="submit" value="Submit" class="btn btn-primary block full-width m-b">Register</button>
                 <p class="text-muted text-center"><small>Already have an account?</small></p>
-                <a class="btn btn-sm btn-white btn-block" href="login.html">Login</a>
+                <a class="btn btn-sm btn-white btn-block" href="{% url 'login' %}">Login</a>
             </form>
             <p class="m-t"> <small>OneStop Project Management 2020</small> </p>
         </div>

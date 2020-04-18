@@ -27,6 +27,7 @@ module.exports = {
     devServer:{
         headers:{
             'Access-Control-Allow-Origin': '*',
-        }
+        },
+        contentBase: __dirname + "/static",
     }
 }
