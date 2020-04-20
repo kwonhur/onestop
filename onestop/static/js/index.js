@@ -1,8 +1,15 @@
-import React from "react";
+import React, { Component, Fragment } from "react";
 import ReactDOM from "react-dom";
-import Profile from "./profile";
-import Dashboards from "./dashboards";
-import "./counter";
+import { Provider } from "react-redux";
+import store from "./store/index.js";
+import Navbar from "./navbar.js";
+import Body from "./body.js";
 
-ReactDOM.render(<Profile />, document.getElementById("profile"));
-ReactDOM.render(<Dashboards />, document.getElementById("dashboards"));
+ReactDOM.render(
+  <Provider store={store}>
+    <Fragment>
+      <Navbar />
+    </Fragment>
+  </Provider>,
+  document.getElementById("side-menu")
+);
