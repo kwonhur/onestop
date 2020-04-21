@@ -13,3 +13,9 @@ ReactDOM.render(
   </Provider>,
   document.getElementById("side-menu")
 );
+ReactDOM.render(
+  <Provider store={store}>
+    <Body />
+  </Provider>,
+  document.getElementById("page-wrapper")
+);

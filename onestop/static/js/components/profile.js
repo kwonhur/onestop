@@ -8,7 +8,7 @@ class Profile extends React.Component {
           <img
             alt="image"
             className="rounded-circle"
-            src="img/profile_small.jpg"
+            src="http://127.0.0.1:8080/img/profile_small.jpg"
           />
           <a data-toggle="dropdown" className="dropdown-toggle" href="#">
             <span className="block m-t-xs font-bold" id="profile">

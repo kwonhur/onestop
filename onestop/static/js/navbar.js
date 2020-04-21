@@ -22,9 +22,10 @@ class Navbar extends React.Component {
 }
 Navbar.defaultProps = {
   sideBarList: [
-    { name: "test", icon: "test-icon" },
-    { name: "test1", icon: "test1-icon" },
-    { name: "test2", icon: "test2-icon" },
+    { name: "Home", icon: "test-icon" },
+    { name: "My Tasks", icon: "test1-icon" },
+    { name: "My Teams", icon: "test2-icon" },
+    { name: "My Projects", icon: "test3-icon" },
   ],
 };
 
