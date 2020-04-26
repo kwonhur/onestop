@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User, Group
-from home.models import Project, Task, Message
+from home.models import Project, Task, Message, Profile
 from rest_framework import viewsets, generics, filters
 from .serializers import (
     UserSerializer,
@@ -8,6 +8,7 @@ from .serializers import (
     ProjectSerializer,
     TaskSerializer,
     MessageSerializer,
+    ProfileSerializer,
 )
 
 # Create your views here.
@@ -16,6 +17,33 @@ from .serializers import (
 class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
     queryset = User.objects.all().order_by("-date_joined")
+
+
+class ProfileViewSet(viewsets.ModelViewSet):
+    serializer_class = ProfileSerializer
+    queryset = Profile.objects.all()
+
+
+class CurrentProfileViewSet(viewsets.ModelViewSet):
+    serializer_class = ProfileSerializer
+    queryset = Profile.objects.all()
+
+    def get_object(self):
+        return self.request.user.profile
+
+    def list(self, request, *args, **kwargs):
+        return self.retrieve(request, *args, **kwargs)
+
+
+class CurrentUserViewSet(viewsets.ModelViewSet):
+    serializer_class = UserSerializer
+    queryset = User.objects.all()
+
+    def get_object(self):
+        return self.request.user
+
+    def list(self, request, *args, **kwargs):
+        return self.retrieve(request, *args, **kwargs)
 
 
 class GroupViewSet(viewsets.ModelViewSet):

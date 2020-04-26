@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 
 class Project extends React.Component {
   render() {

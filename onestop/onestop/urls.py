@@ -31,6 +31,6 @@ urlpatterns = [
         auth_views.LogoutView.as_view(template_name="login/logout.html"),
         name="logout",
     ),
-    path("home", home_views.home, name="home"),
+    path("home/", home_views.home, name="home"),
     path("api/", include(router.urls)),
 ]

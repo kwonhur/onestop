@@ -5,3 +5,4 @@ site-packages
 venv
 *.pyo
 *.pyc
+rest_framework

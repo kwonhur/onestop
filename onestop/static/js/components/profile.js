@@ -8,11 +8,11 @@ class Profile extends React.Component {
           <img
             alt="image"
             className="rounded-circle"
-            src="http://127.0.0.1:8080/img/profile_small.jpg"
+            src={this.props.profilePicAddress}
           />
           <a data-toggle="dropdown" className="dropdown-toggle" href="#">
             <span className="block m-t-xs font-bold" id="profile">
-              David Williams
+              {this.props.profileFirstName} {this.props.profileLastName}
             </span>
             <span className="text-muted text-xs block">
               Art Director <b className="caret"></b>
