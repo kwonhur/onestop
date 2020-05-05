@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "channels",
     "api",
+    "ws",
     "login",
     "crispy_forms",
     "rest_framework",
@@ -74,6 +76,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "onestop.wsgi.application"
 
+ASGI_APPLICATION = "onestop.routing.application"
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
@@ -129,3 +132,12 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 CRISPY_TEMPLATE_PACK = "bootstrap3"
 
 LOGIN_REDIRECT_URL = "home"
+
+REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379")
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {"hosts": [REDIS_URL],},
+    },
+}
